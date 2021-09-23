@@ -1,8 +1,18 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main()
-{
-    printf("Hello World\n");
+#include <ctype.h>
 
-    return 0;
+int main() {
+    printf("Введите число с плавающей точкой(float) \n");
+    char c;
+    while ((c = getchar()) != '\n') {
+        if (c == '.') {
+            printf("|");
+        } else if (!isdigit(c)) {
+            printf("вводите числа, а не символы!\n");
+            return 0;
+        } else putchar(c);
+
+    }
+    printf("\n");
 }
