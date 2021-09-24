@@ -12,7 +12,7 @@ int main(void) {
             return -5;
         } else {
             putchar(c);
-
+        }
     }
     printf("\n");
 }
