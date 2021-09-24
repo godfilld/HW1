@@ -16,3 +16,4 @@ int main(void) {
     }
     printf("\n");
 }
+//echo $? чтобы вывсти ретёрн
