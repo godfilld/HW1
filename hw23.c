@@ -3,10 +3,6 @@
 #include <stdlib.h>
 
 int main() {
-  /*FILE * f1 = fopen("matrix.txt", "a");
-    if(f1 != NULl){
-
-    };*/
   FILE * f = fopen("graph.gv", "w");
   int row, col;
   int i, j, m = 1;
@@ -21,7 +17,6 @@ int main() {
       scanf("%d", & a[i][j]);
     }
   }
-  printf("%d%d", i, j);
   fprintf(f, "graph {\n");
   for (j = 0; j < col; ++j) {
     for (i = 0; i < row; ++i) {
