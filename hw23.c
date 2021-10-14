@@ -38,3 +38,4 @@ int main() {
     system("wslview 2.png");
     return 0;
 }
+
