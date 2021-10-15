@@ -4,7 +4,7 @@
 int main() {
     FILE * f = fopen("graph.gv", "w");
     int row, col;
-    int i, j, m = 1;
+    int i, j, m = 0;
     printf("Ввелите количество стобцов матрицы: ");
     scanf("%d", & row);
     printf("Введите количество строк матрицы: ");
@@ -20,7 +20,7 @@ int main() {
     for (j = 0; j < col; ++j) {
         for (i = 0; i < row; ++i) {
             if (a[i][j] == 1) {
-                if (m % 2 != 0) {
+                if (m % 2 == 0) {
                     fprintf(f, "%d", i + 1);
                     fprintf(f, "--");
                     m++;
@@ -33,9 +33,13 @@ int main() {
     }
     fprintf(f, "}");
     fclose(f);
+    if (j < i-1)
+        printf("Введенный граф не связанный\n");
+    else
+        printf("Введенный граф связанный\n");
+    
 
     system("dot -Tpng graph.gv -o '2.png'");
     system("wslview 2.png");
     return 0;
 }
-
