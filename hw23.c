@@ -38,30 +38,23 @@ int main() {
 	flag[0] = 1;
 	for (int i = 1; i < col; i++)
 		flag[i] = 0;
-	for (int i = 0; i < col; i++)
-	{
+	for (int i = 0; i < col; i++){
 
-		if (flag[i] == 1)
-		{
-			for (int j = 0; j < col; j++)
-			{
-				if (flag[j] != 1)
-				{
+		if (flag[i] == 1){
+			for (int j = 0; j < col; j++){
+				if (flag[j] != 1){
 
-					for (int m = 0; m < row; m++)
-					{
-						if ((a[i][m] == 1) && (a[j][m] == 1))
-						{
-							flag[j] = 1;
-							sum++;
-
-							break;
-						}
+					for (int m = 0; m < row; m++){
+					if ((a[i][m] == 1) && (a[j][m] == 1)){
+					flag[j] = 1;
+					sum++;
+					break;
 					}
 				}
 			}
 		}
 	}
+ }
 	if (sum == col)
 		printf("Введенный граф связанный\n");
 	else printf("Введенный граф не связанный");
